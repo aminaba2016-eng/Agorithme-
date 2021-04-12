@@ -1,0 +1,28 @@
+algorithm sentence
+VAR
+ i : integer := 0;
+ words: integer := 0;
+ phrase : STRING[50];
+ voy : char:= "a" "e" "u" "i" "y" "o";
+ count : integer:= 0;
+ vcount : integer:= 0;
+
+BEGIN
+ write("enter the senence");
+ read(phrase);
+ for i from 0 to phrase.length-1 step 1 do
+    IF (phrase[i]<>'') THEN
+        count++;
+    END_IF
+    write("the number of caracters in a string:" + count);
+    IF (phrase[i]='' and phrase[i+1].isalpha() and i>0) THEN
+        words++;
+    END_IF
+    words++;
+    write("the number of words is" + words);
+    phrase=phrase.lower();
+    IF (phrase[i]='a' or phrase[i]='e' or phrase[i]='i' or phrase[i]='o' or phrase[i]='u') THEN
+        vcount++;
+    END_IF
+    write("the number of vowels is" + vcount);
+END    
